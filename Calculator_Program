@@ -1,0 +1,28 @@
+// This is my implementation of calculator program made in java
+
+#include <stdio.h>
+
+int main(){
+
+    float num1, num2, result=0;
+    char op;
+    printf("Enter two numbers\n");
+    scanf("%f%f",&num1,&num2);
+    printf("Enter character\n");
+    scanf(" %c",&op);
+
+    switch(op){
+        case '/': if(num2!=0)
+                    {
+                        result = num1/num2;
+                    }
+                  else
+                  {
+                    printf("Division by 0 not possible\n");
+                  }  
+                break;
+            default : printf("Invalid operator\n");
+    }
+    printf("Result : %.2f %c %.2f = %.2f\n",num1,op,num2,result);
+    return 0;
+}
